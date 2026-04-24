@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Desmonte 381</title>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#e85d04;--rust:#9e2a2b;--charcoal:#1a1a1a;--steel:#2d2d2d;--grey:#888;--light:#f0ede8;--white:#ffffff;--yellow:#f4a100;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--charcoal);color:var(--light);font-family:'Roboto Condensed',sans-serif;overflow-x:hidden;}
+
+nav{position:fixed;top:0;width:100%;z-index:100;background:var(--charcoal);border-bottom:3px solid var(--orange);display:flex;justify-content:space-between;align-items:center;padding:1rem 3rem;}
+.nav-logo{display:flex;align-items:center;gap:0.8rem;text-decoration:none;}
+.nav-num{font-family:'Russo One',sans-serif;font-size:2rem;color:var(--orange);line-height:1;}
+.nav-text{display:flex;flex-direction:column;}
+.nav-text .main{font-family:'Russo One',sans-serif;font-size:0.9rem;color:var(--white);letter-spacing:0.05em;}
+.nav-text .sub{font-size:0.62rem;color:var(--grey);letter-spacing:0.12em;text-transform:uppercase;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--grey);text-decoration:none;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;transition:color 0.2s;}
+.nav-links a:hover{color:var(--orange);}
+
+.page-header{padding:8rem 3rem 4rem;background:var(--steel);border-bottom:2px solid var(--orange);position:relative;overflow:hidden;}
+.page-header::before{content:'§';position:absolute;right:3rem;bottom:-1rem;font-family:'Russo One',sans-serif;font-size:18rem;color:rgba(232,93,4,0.04);pointer-events:none;line-height:1;}
+.ph-label{font-family:'Russo One',sans-serif;font-size:0.68rem;letter-spacing:0.2em;color:var(--orange);text-transform:uppercase;margin-bottom:0.8rem;}
+.ph-title{font-family:'Russo One',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:var(--white);margin-bottom:0.8rem;line-height:1.05;}
+.ph-meta{font-size:0.78rem;color:var(--grey);letter-spacing:0.05em;}
+
+.warn-strip{background:repeating-linear-gradient(45deg,var(--orange) 0,var(--orange) 20px,var(--yellow) 20px,var(--yellow) 40px);padding:0.5rem;display:flex;justify-content:center;}
+.warn-strip span{background:var(--charcoal);padding:0.4rem 2rem;font-family:'Russo One',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:var(--orange);text-transform:uppercase;}
+
+.content{max-width:800px;margin:0 auto;padding:4rem 3rem;}
+
+.section{margin-bottom:3rem;}
+.section-num{font-family:'Russo One',sans-serif;font-size:0.65rem;letter-spacing:0.2em;color:var(--orange);text-transform:uppercase;margin-bottom:0.4rem;}
+.section h2{font-family:'Russo One',sans-serif;font-size:1.4rem;color:var(--white);margin-bottom:1.2rem;padding-bottom:0.6rem;border-bottom:1px solid rgba(232,93,4,0.2);}
+.section p{font-size:0.92rem;color:var(--grey);line-height:1.9;margin-bottom:1rem;}
+.section p:last-child{margin-bottom:0;}
+
+.data-block{background:var(--steel);}
+.dr{display:flex;border-bottom:1px solid rgba(255,255,255,0.04);}
+.dr:last-child{border-bottom:none;}
+.dk{padding:0.9rem 1.2rem;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(136,136,136,0.7);min-width:160px;display:flex;align-items:center;}
+.dv{padding:0.9rem 1.2rem;font-size:0.88rem;color:var(--light);}
+
+ul.list{margin:0.8rem 0 1rem 0;padding-left:0;list-style:none;}
+ul.list li{font-size:0.9rem;color:var(--grey);line-height:1.8;padding:0.3rem 0 0.3rem 1.2rem;position:relative;}
+ul.list li::before{content:'—';position:absolute;left:0;color:var(--orange);}
+
+.highlight-box{background:var(--steel);border-left:3px solid var(--orange);padding:1.2rem 1.5rem;margin:1.2rem 0;}
+.highlight-box p{color:var(--light);font-size:0.88rem;line-height:1.8;margin:0;}
+
+.contact-box{background:var(--orange);padding:2.5rem 3rem;margin-top:3rem;}
+.contact-box h3{font-family:'Russo One',sans-serif;font-size:1.3rem;color:white;margin-bottom:0.5rem;}
+.contact-box p{color:rgba(255,255,255,0.75);font-size:0.88rem;line-height:1.7;margin-bottom:1rem;}
+.contact-box .ci{background:rgba(0,0,0,0.2);padding:1rem 1.2rem;border-left:3px solid rgba(255,255,255,0.3);margin-top:0.8rem;}
+.contact-box .ci-l{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.6);margin-bottom:0.3rem;}
+.contact-box .ci-v{font-size:0.9rem;color:white;font-weight:700;}
+.cg{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;}
+
+footer{background:#0a0a0a;padding:1.5rem 3rem;display:flex;justify-content:space-between;border-top:2px solid var(--orange);}
+footer p{font-size:0.74rem;color:#3a3a3a;}
+
+@media(max-width:900px){nav{padding:1rem 1.5rem;}.nav-links{display:none;}.page-header{padding:7rem 1.5rem 3rem;}.content{padding:3rem 1.5rem;}.cg{grid-template-columns:1fr;}.contact-box{padding:2rem 1.5rem;}footer{flex-direction:column;gap:0.5rem;padding:1rem 1.5rem;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-num">381</div>
+    <div class="nav-text"><span class="main">DESMONTE</span><span class="sub">Peças &amp; Acessórios Usados</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#inicio">Início</a></li>
+    <li><a href="/#servicos">Serviços</a></li>
+    <li><a href="/#sobre">Sobre</a></li>
+    <li><a href="/#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="ph-label">// documento legal</div>
+  <h1 class="ph-title">POLÍTICA DE<br>PRIVACIDADE</h1>
+  <p class="ph-meta">Última atualização: Abril de 2026 · Desmonte 381 Ltda</p>
+</div>
+
+<div class="warn-strip"><span>✔ LGPD · LEI Nº 13.709/2018 · PROTEÇÃO DE DADOS PESSOAIS</span></div>
+
+<div class="content">
+
+  <div class="section">
+    <div class="section-num">// 01</div>
+    <h2>QUEM SOMOS</h2>
+    <p>A <strong style="color:var(--light)">DESMONTE 381 LTDA</strong>, inscrita no CNPJ sob o nº 48.311.590/0001-08, com sede na Rodovia BR-381, km 400 — Zona Rural, Bom Jesus do Amparo/MG, CEP 35.908-000, é a controladora responsável pelo tratamento dos dados pessoais coletados por meio deste site e dos demais canais de atendimento.</p>
+    <p>Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 02</div>
+    <h2>DADOS QUE COLETAMOS</h2>
+    <p>Podemos coletar os seguintes dados pessoais quando você entra em contato conosco ou utiliza nossos serviços:</p>
+    <ul class="list">
+      <li>Nome completo</li>
+      <li>Número de telefone e/ou WhatsApp</li>
+      <li>Endereço de e-mail (quando fornecido)</li>
+      <li>Dados do veículo de interesse (marca, modelo, ano, placa)</li>
+      <li>Histórico de consultas e pedidos realizados</li>
+      <li>Dados de navegação (cookies, endereço IP, páginas visitadas)</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Não coletamos dados sensíveis como informações de saúde, origem étnica, convicções religiosas ou dados biométricos. Apenas coletamos o estritamente necessário para prestar nossos serviços.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 03</div>
+    <h2>FINALIDADE DO TRATAMENTO</h2>
+    <p>Utilizamos seus dados pessoais exclusivamente para as seguintes finalidades:</p>
+    <ul class="list">
+      <li>Responder suas consultas sobre disponibilidade e preço de peças</li>
+      <li>Realizar orçamentos e processar pedidos de compra</li>
+      <li>Enviar informações sobre o status do seu pedido</li>
+      <li>Melhorar nosso atendimento e identificar peças mais procuradas</li>
+      <li>Cumprir obrigações legais e fiscais</li>
+      <li>Enviar comunicações comerciais, somente mediante seu consentimento expresso</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 04</div>
+    <h2>BASE LEGAL</h2>
+    <p>O tratamento dos seus dados pessoais é realizado com base nas seguintes hipóteses legais previstas na LGPD:</p>
+    <ul class="list">
+      <li><strong style="color:var(--light)">Execução de contrato</strong> — para atender pedidos e consultas realizadas por você</li>
+      <li><strong style="color:var(--light)">Legítimo interesse</strong> — para melhorar nossos serviços e garantir a segurança das operações</li>
+      <li><strong style="color:var(--light)">Obrigação legal</strong> — para cumprimento de exigências fiscais e regulatórias</li>
+      <li><strong style="color:var(--light)">Consentimento</strong> — para o envio de comunicações de marketing, quando aplicável</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 05</div>
+    <h2>COMPARTILHAMENTO DE DADOS</h2>
+    <p>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros para fins comerciais. Podemos compartilhar informações apenas nas seguintes situações:</p>
+    <ul class="list">
+      <li>Com prestadores de serviço que nos auxiliam nas operações (ex.: plataformas de comunicação), sob acordos de confidencialidade</li>
+      <li>Com autoridades públicas, quando exigido por lei ou ordem judicial</li>
+      <li>Em caso de fusão, aquisição ou transferência de negócio, com notificação prévia a você</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 06</div>
+    <h2>RETENÇÃO DE DADOS</h2>
+    <p>Seus dados pessoais são mantidos pelo período necessário para cumprir as finalidades descritas nesta política ou pelo prazo exigido por lei. Os critérios usados para determinar o período de retenção incluem:</p>
+    <ul class="list">
+      <li>Dados de transações comerciais: mínimo de 5 anos (obrigação fiscal)</li>
+      <li>Dados de contato e consultas: até 2 anos após o último contato</li>
+      <li>Dados de navegação: até 12 meses</li>
+    </ul>
+    <p>Findo o prazo, os dados são eliminados de forma segura ou anonimizados.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 07</div>
+    <h2>SEUS DIREITOS</h2>
+    <p>Nos termos da LGPD, você tem os seguintes direitos em relação aos seus dados pessoais:</p>
+    <ul class="list">
+      <li><strong style="color:var(--light)">Acesso</strong> — confirmar a existência de tratamento e obter cópia dos seus dados</li>
+      <li><strong style="color:var(--light)">Correção</strong> — solicitar a atualização de dados incompletos, inexatos ou desatualizados</li>
+      <li><strong style="color:var(--light)">Eliminação</strong> — pedir a exclusão de dados desnecessários ou tratados em desconformidade com a LGPD</li>
+      <li><strong style="color:var(--light)">Portabilidade</strong> — receber seus dados em formato estruturado e interoperável</li>
+      <li><strong style="color:var(--light)">Oposição</strong> — opor-se ao tratamento realizado com base em legítimo interesse</li>
+      <li><strong style="color:var(--light)">Revogação do consentimento</strong> — retirar consentimento a qualquer momento, sem prejuízo do tratamento anterior</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Para exercer qualquer um desses direitos, entre em contato conosco pelo telefone (33) 9165-6765 ou pelo WhatsApp. Responderemos à sua solicitação em até 15 dias úteis.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 08</div>
+    <h2>COOKIES E RASTREAMENTO</h2>
+    <p>Este site pode utilizar cookies e tecnologias similares para melhorar a experiência de navegação, analisar o uso do site e apoiar nossas ações de marketing. Você pode configurar seu navegador para recusar cookies, mas isso pode limitar algumas funcionalidades do site.</p>
+    <p>Os tipos de cookies utilizados incluem: cookies estritamente necessários para o funcionamento do site, cookies analíticos para entender o comportamento de navegação e cookies de preferências para recordar suas configurações.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 09</div>
+    <h2>SEGURANÇA</h2>
+    <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados pessoais contra acesso não autorizado, perda, destruição ou divulgação indevida. Nossos colaboradores que têm acesso a dados pessoais são orientados sobre a importância da confidencialidade e proteção dessas informações.</p>
+    <p>Em caso de incidente de segurança que possa acarretar risco ou dano relevante a você, notificaremos a Autoridade Nacional de Proteção de Dados (ANPD) e os titulares afetados, conforme exigido pela LGPD.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 10</div>
+    <h2>ALTERAÇÕES NESTA POLÍTICA</h2>
+    <p>Esta Política de Privacidade pode ser atualizada periodicamente para refletir mudanças em nossas práticas, nos serviços oferecidos ou em exigências legais. A versão mais recente estará sempre disponível nesta página, com a data da última atualização indicada no topo do documento.</p>
+    <p>Recomendamos que você revise esta política periodicamente. O uso continuado dos nossos serviços após a publicação de alterações constituirá sua aceitação das mesmas.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-num">// 11</div>
+    <h2>ENCARREGADO (DPO)</h2>
+    <div class="data-block">
+      <div class="dr"><div class="dk">Empresa</div><div class="dv">Desmonte 381 Ltda</div></div>
+      <div class="dr"><div class="dk">CNPJ</div><div class="dv">48.311.590/0001-08</div></div>
+      <div class="dr"><div class="dk">Endereço</div><div class="dv">Rod. BR-381, km 400 — Zona Rural, Bom Jesus do Amparo/MG</div></div>
+      <div class="dr"><div class="dk">CEP</div><div class="dv">35.908-000</div></div>
+      <div class="dr"><div class="dk">Telefone</div><div class="dv">(33) 3516-3084</div></div>
+      <div class="dr"><div class="dk">WhatsApp</div><div class="dv">(33) 9165-6765</div></div>
+    </div>
+  </div>
+
+  <div class="contact-box">
+    <h3>DÚVIDAS SOBRE PRIVACIDADE?</h3>
+    <p>Entre em contato conosco. Estamos prontos para esclarecer qualquer questão sobre o tratamento dos seus dados pessoais.</p>
+    <div class="cg">
+      <div class="ci"><div class="ci-l">Telefone</div><div class="ci-v">(33) 3516-3084</div></div>
+      <div class="ci"><div class="ci-l">WhatsApp</div><div class="ci-v">(33) 9165-6765</div></div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>CNPJ: 48.311.590/0001-08 · DESMONTE 381 LTDA</p>
+  <p>© 2026 — <a href="/privacy" style="color:#3a3a3a;text-decoration:none;">Política de Privacidade</a></p>
+</footer>
+
+</body>
+</html>

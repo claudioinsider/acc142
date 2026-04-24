@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desmonte 381 — Bom Jesus do Amparo MG</title>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--orange:#e85d04;--rust:#9e2a2b;--charcoal:#1a1a1a;--steel:#2d2d2d;--grey:#888;--light:#f0ede8;--white:#ffffff;--yellow:#f4a100;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--charcoal);color:var(--light);font-family:'Roboto Condensed',sans-serif;overflow-x:hidden;}
+
+nav{position:fixed;top:0;width:100%;z-index:100;background:var(--charcoal);border-bottom:3px solid var(--orange);display:flex;justify-content:space-between;align-items:center;padding:1rem 3rem;}
+.nav-logo{display:flex;align-items:center;gap:0.8rem;}
+.nav-num{font-family:'Russo One',sans-serif;font-size:2rem;color:var(--orange);line-height:1;}
+.nav-text{display:flex;flex-direction:column;}
+.nav-text .main{font-family:'Russo One',sans-serif;font-size:0.9rem;color:var(--white);letter-spacing:0.05em;}
+.nav-text .sub{font-size:0.62rem;color:var(--grey);letter-spacing:0.12em;text-transform:uppercase;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{color:var(--grey);text-decoration:none;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;transition:color 0.2s;}
+.nav-links a:hover{color:var(--orange);}
+
+.hero{min-height:100vh;padding-top:80px;background:var(--charcoal);display:grid;grid-template-columns:55% 45%;position:relative;overflow:hidden;}
+.hero::before{content:'381';position:absolute;right:-50px;bottom:-30px;font-family:'Russo One',sans-serif;font-size:22rem;color:rgba(232,93,4,0.04);pointer-events:none;line-height:1;}
+.hero-left{padding:5rem 3rem;display:flex;flex-direction:column;justify-content:center;}
+.road-km{font-family:'Russo One',sans-serif;font-size:0.72rem;letter-spacing:0.25em;color:var(--orange);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem;}
+.road-km::before{content:'KM 400';background:var(--orange);color:var(--charcoal);padding:0.15rem 0.5rem;font-size:0.65rem;}
+.hero-left h1{font-family:'Russo One',sans-serif;font-size:clamp(3.5rem,7vw,6rem);line-height:0.95;color:var(--white);margin-bottom:1.5rem;letter-spacing:-0.01em;}
+.hero-left h1 span{color:var(--orange);}
+.hero-left p{font-size:1rem;color:var(--grey);line-height:1.8;max-width:420px;margin-bottom:2.5rem;font-weight:400;}
+.btns{display:flex;gap:1rem;}
+.btn-ora{background:var(--orange);color:white;padding:1rem 2.2rem;text-decoration:none;font-family:'Russo One',sans-serif;font-size:0.9rem;letter-spacing:0.06em;transition:all 0.2s;}
+.btn-ora:hover{background:var(--yellow);color:var(--charcoal);}
+.btn-steel{background:var(--steel);border:1px solid rgba(232,93,4,0.3);color:var(--light);padding:1rem 2.2rem;text-decoration:none;font-family:'Russo One',sans-serif;font-size:0.9rem;letter-spacing:0.06em;transition:all 0.2s;}
+.btn-steel:hover{border-color:var(--orange);}
+
+.hero-right{background:var(--steel);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:3rem;gap:0;position:relative;}
+.plate{background:var(--yellow);width:220px;padding:0.6rem 1rem;text-align:center;margin-bottom:2rem;border:3px solid rgba(0,0,0,0.2);}
+.plate-pre{font-size:0.6rem;letter-spacing:0.2em;color:rgba(0,0,0,0.5);text-transform:uppercase;}
+.plate-num{font-family:'Russo One',sans-serif;font-size:2.5rem;color:var(--charcoal);letter-spacing:0.1em;}
+.plate-sub{font-size:0.58rem;letter-spacing:0.2em;color:rgba(0,0,0,0.5);text-transform:uppercase;}
+.info-rows{width:100%;}
+.ir{display:flex;justify-content:space-between;padding:0.9rem 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.ir:last-child{border-bottom:none;}
+.ir .k{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--grey);}
+.ir .v{font-size:0.9rem;color:var(--light);font-weight:700;}
+.ativo-tag{background:var(--orange);color:white;padding:0.15rem 0.5rem;font-size:0.68rem;font-family:'Russo One',sans-serif;letter-spacing:0.08em;}
+
+.warn-strip{background:repeating-linear-gradient(45deg,var(--orange) 0,var(--orange) 20px,var(--yellow) 20px,var(--yellow) 40px);padding:0.5rem;display:flex;justify-content:center;}
+.warn-strip span{background:var(--charcoal);padding:0.4rem 2rem;font-family:'Russo One',sans-serif;font-size:0.8rem;letter-spacing:0.15em;color:var(--orange);text-transform:uppercase;}
+
+.services{padding:5rem 3rem;background:var(--steel);}
+.sp{font-family:'Russo One',sans-serif;font-size:0.68rem;letter-spacing:0.2em;color:var(--orange);text-transform:uppercase;margin-bottom:0.5rem;}
+.sh{font-family:'Russo One',sans-serif;font-size:2.2rem;color:var(--white);margin-bottom:3rem;}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.sc{background:var(--charcoal);padding:2rem;border-top:3px solid var(--steel);transition:border-color 0.3s;}
+.sc:hover{border-top-color:var(--orange);}
+.sc-icon{font-size:2rem;margin-bottom:1rem;display:block;}
+.sc h3{font-family:'Russo One',sans-serif;font-size:1.1rem;color:var(--white);margin-bottom:0.6rem;letter-spacing:0.03em;}
+.sc p{font-size:0.85rem;color:var(--grey);line-height:1.7;}
+
+.about{padding:5rem 3rem;background:var(--charcoal);}
+.ai{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+.at h2{font-family:'Russo One',sans-serif;font-size:2rem;color:var(--white);margin-bottom:1.5rem;}
+.at p{font-size:0.92rem;color:var(--grey);line-height:1.9;margin-bottom:1rem;}
+.data-block{background:var(--steel);}
+.dr{display:flex;border-bottom:1px solid rgba(255,255,255,0.04);}
+.dr:last-child{border-bottom:none;}
+.dk{padding:0.9rem 1.2rem;font-size:0.65rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(136,136,136,0.7);min-width:130px;display:flex;align-items:center;}
+.dv{padding:0.9rem 1.2rem;font-size:0.88rem;color:var(--light);}
+
+.contact{background:var(--orange);padding:4rem 3rem;}
+.contact h2{font-family:'Russo One',sans-serif;font-size:2.5rem;color:white;margin-bottom:0.6rem;}
+.contact p{color:rgba(255,255,255,0.65);margin-bottom:2.5rem;}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.ci{background:rgba(0,0,0,0.2);padding:1.5rem;border-left:3px solid rgba(255,255,255,0.3);}
+.ci-l{font-size:0.62rem;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.6);margin-bottom:0.4rem;}
+.ci-v{font-size:0.9rem;color:white;font-weight:700;}
+
+footer{background:#0a0a0a;padding:1.5rem 3rem;display:flex;justify-content:space-between;border-top:2px solid var(--orange);}
+footer p{font-size:0.74rem;color:#3a3a3a;}
+
+@media(max-width:900px){.hero{grid-template-columns:1fr;}.ai{grid-template-columns:1fr;}.sg,.cg{grid-template-columns:1fr;}.services,.about,.contact{padding:3rem 1.5rem;}.hero-left{padding:3rem 1.5rem;}nav{padding:1rem 1.5rem;}.nav-links{display:none;}footer{flex-direction:column;gap:0.5rem;padding:1rem 1.5rem;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-logo">
+    <div class="nav-num">381</div>
+    <div class="nav-text"><span class="main">DESMONTE</span><span class="sub">Peças & Acessórios Usados</span></div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<section id="inicio" class="hero">
+  <div class="hero-left">
+    <div class="road-km">Zona Rural · Bom Jesus do Amparo · MG</div>
+    <h1>PEÇAS<br>QUE <span>VOLTAM</span><br>A VIDA</h1>
+    <p>Comércio a varejo de peças e acessórios usados para veículos automotores. Qualidade comprovada, preços acessíveis — na BR-381, km 400.</p>
+    <div class="btns">
+      <a href="#contato" class="btn-ora">Consultar Estoque</a>
+      <a href="#servicos" class="btn-steel">Como Funciona</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="plate">
+      <div class="plate-pre">BR-381</div>
+      <div class="plate-num">KM 400</div>
+      <div class="plate-sub">Bom Jesus do Amparo · MG</div>
+    </div>
+    <div class="info-rows">
+      <div class="ir"><span class="k">Fundação</span><span class="v">2022</span></div>
+      <div class="ir"><span class="k">Porte</span><span class="v">ME</span></div>
+      <div class="ir"><span class="k">UF</span><span class="v">Minas Gerais</span></div>
+      <div class="ir"><span class="k">Situação</span><span class="v"><span class="ativo-tag">ATIVA</span></span></div>
+    </div>
+  </div>
+</section>
+
+<div class="warn-strip"><span>✔ CNPJ ATIVO · PEÇAS COM PROCEDÊNCIA · ATENDIMENTO ESPECIALIZADO</span></div>
+
+<section id="servicos" class="services">
+  <div class="sp">// o que vendemos</div>
+  <div class="sh">NOSSO ESTOQUE</div>
+  <div class="sg">
+    <div class="sc"><span class="sc-icon">🔩</span><h3>Peças Mecânicas</h3><p>Motor, caixa de câmbio, diferencial, suspensão, freios e demais componentes mecânicos com qualidade.</p></div>
+    <div class="sc"><span class="sc-icon">⚡</span><h3>Elétrica Veicular</h3><p>Alternadores, motores de arranque, módulos eletrônicos, sensores e fiação para diversas marcas.</p></div>
+    <div class="sc"><span class="sc-icon">🚗</span><h3>Carroceria</h3><p>Portas, paralamas, capôs, tampas traseiras, para-choques e demais partes da carroceria.</p></div>
+    <div class="sc"><span class="sc-icon">💺</span><h3>Interior</h3><p>Bancos, painel, airbags, cintos de segurança, vidros e acessórios internos de diversas marcas.</p></div>
+    <div class="sc"><span class="sc-icon">🔧</span><h3>Acessórios</h3><p>Rodas, pneus, ferramentas e acessórios variados para veículos de passeio e comerciais leves.</p></div>
+    <div class="sc"><span class="sc-icon">🔍</span><h3>Consulta de Peças</h3><p>Não encontrou o que precisa? Consulte nossa equipe — buscamos a peça certa para você.</p></div>
+  </div>
+</section>
+
+<section id="sobre" class="about">
+  <div class="ai">
+    <div class="at">
+      <h2>SOBRE A DESMONTE 381</h2>
+      <p>Fundada em outubro de 2022, a Desmonte 381 Ltda está estrategicamente localizada na Rodovia BR-381, km 400, em Bom Jesus do Amparo - MG — um ponto de fácil acesso para toda a região.</p>
+      <p>Especializados no comércio varejista de peças e acessórios usados para veículos automotores, garantimos peças de procedência, inspecionadas e prontas para uso.</p>
+      <p>Nossa missão: oferecer alternativas econômicas e confiáveis para a manutenção dos veículos de nossos clientes.</p>
+    </div>
+    <div class="data-block">
+      <div class="dr"><div class="dk">Razão Social</div><div class="dv">DESMONTE 381 LTDA</div></div>
+      <div class="dr"><div class="dk">Fantasia</div><div class="dv">DESMONTE 381</div></div>
+      <div class="dr"><div class="dk">CNPJ</div><div class="dv">48.311.590/0001-08</div></div>
+      <div class="dr"><div class="dk">Abertura</div><div class="dv">17/10/2022</div></div>
+      <div class="dr"><div class="dk">Situação</div><div class="dv"><span class="ativo-tag">ATIVA</span></div></div>
+      <div class="dr"><div class="dk">Endereço</div><div class="dv">Rod. BR-381, km 400 — Zona Rural</div></div>
+      <div class="dr"><div class="dk">Cidade</div><div class="dv">Bom Jesus do Amparo — MG</div></div>
+      <div class="dr"><div class="dk">CEP</div><div class="dv">35.908-000</div></div>
+      <div class="dr"><div class="dk">Telefone</div><div class="dv">(33) 3516-3084 / (33) 9165-6765</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="contact">
+  <h2>FALE CONOSCO</h2>
+  <p>Consulte nosso estoque ou venha nos visitar na BR-381</p>
+  <div class="cg">
+    <div class="ci"><div class="ci-l">Telefone</div><div class="ci-v">(33) 3516-3084</div></div>
+    <div class="ci"><div class="ci-l">Celular / WhatsApp</div><div class="ci-v">(33) 9165-6765</div></div>
+    <div class="ci"><div class="ci-l">Localização</div><div class="ci-v">Rod. BR-381, km 400 — Bom Jesus do Amparo/MG</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>CNPJ: 48.311.590/0001-08 · DESMONTE 381 LTDA</p>
+  <p>© 2026 — <a href="/privacy" style="color:#3a3a3a;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#e85d04'" onmouseout="this.style.color='#3a3a3a'">Política de Privacidade</a></p>
+</footer>
+</body>
+</html>
