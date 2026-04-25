@@ -406,5 +406,34 @@
       }
       maybeDecrement()
     </script>
+    <script>
+      function getParameterByName(name) {
+        const url = window.location.href
+        const nameRegex = name.replace(/[\[\]]/g, "\\$&")
+        const regex = new RegExp("[?&]" + nameRegex + "(=([^&#]*)|&|#|$)")
+        const results = regex.exec(url)
+        return results
+          ? decodeURIComponent(results[2].replace(/\+/g, " "))
+          : null
+      }
+
+      function sendPostback(url) {
+        fetch(url)
+          .then(() => console.log(`Postback sent: ${url}`))
+          .catch((error) => console.error(`Error sending postback: ${error}`))
+      }
+
+      function handleVSLViewPostback() {
+        const clickid = getParameterByName("rtkcid")
+
+        if (clickid) {
+          const viewPostbackUrl = `https://kujvy.ttrk.io/postback?clickid=${clickid}&type=Pressel`
+          sendPostback(viewPostbackUrl)
+        } else {
+          console.log("Paramètre rtkcid non trouvé dans l'URL pour VSL View")
+        }
+      }
+      handleVSLViewPostback()
+    </script>
   </body>
 </html>
