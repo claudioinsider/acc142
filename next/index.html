@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="https://trk.desmonte381.lat/track.js?rtkcmpid=69ec12bcbe471c304bf77864"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Helpers</title>
+
+    <style>
+      /* ── Variables ── */
+      :root {
+        --mq9-w: #ffffff;
+        --mq9-bg: #ffffff;
+        --mq9-dk: #000000;
+        --mq9-md: #333333;
+        --mq9-hd: #000000;
+        --mq9-lt: #ffffff;
+        --mq9-br: #cccccc;
+        --mq9-cr: #ffffff;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--mq9-bg);
+        color: var(--mq9-dk);
+        font-family: "Segoe UI", system-ui, sans-serif;
+        line-height: 1.6;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* ── Hero ── */
+      .tyb-4mx {
+        width: 100%;
+        background: var(--mq9-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .tyb-4mx > * {
+        width: 100%;
+        max-width: 1400px;
+      }
+
+      /* ── Bottles ── */
+      .rjz-8kn {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 28px 16px 34px;
+        background: var(--mq9-cr);
+      }
+      .rjz-8kn .cwp-2sl {
+        width: min(920px, 100%);
+        text-align: center;
+      }
+      .rjz-8kn .cwp-2sl h3 {
+        font-size: 20px;
+        line-height: 1.4;
+        margin-bottom: 8px;
+        color: #000000;
+      }
+      .rjz-8kn .cwp-2sl h3 span {
+        color: #000000;
+      }
+      .rjz-8kn .cwp-2sl p {
+        color: #333333;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .rjz-8kn .aev-7fh {
+        width: min(920px, 100%);
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        align-items: stretch;
+      }
+      .rjz-8kn .aev-7fh a {
+        display: block;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .rjz-8kn .aev-7fh a:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 38px rgba(0, 0, 0, 0.25);
+      }
+      .rjz-8kn .aev-7fh img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+      @media (max-width: 900px) {
+        .rjz-8kn .aev-7fh {
+          grid-template-columns: minmax(0, 1fr);
+          justify-items: center;
+        }
+        .rjz-8kn .aev-7fh a {
+          width: min(420px, 100%);
+        }
+      }
+      @media (min-width: 901px) {
+        .rjz-8kn .aev-7fh,
+        .rjz-8kn .cwp-2sl {
+          margin: auto;
+        }
+        .rjz-8kn .aev-7fh {
+          width: min(1280px, 100%);
+          gap: 22px;
+        }
+        .rjz-8kn .aev-7fh a {
+          background: transparent;
+          box-shadow: none;
+        }
+        .rjz-8kn .aev-7fh a:nth-child(2),
+        .rjz-8kn .aev-7fh a:nth-child(3) {
+          align-self: center;
+          margin-top: 18px;
+        }
+        .rjz-8kn .aev-7fh a:nth-child(1) {
+          order: 2;
+        }
+        .rjz-8kn .aev-7fh a:nth-child(2) {
+          order: 1;
+        }
+        .rjz-8kn .aev-7fh a:nth-child(3) {
+          order: 3;
+        }
+      }
+      @media (max-width: 620px) {
+        .rjz-8kn {
+          padding: 22px 12px 28px;
+        }
+        .rjz-8kn .cwp-2sl h3 {
+          font-size: 18px;
+        }
+        .rjz-8kn .aev-7fh {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 14px;
+        }
+      }
+
+      /* ── Footer ── */
+      .gqo-5rt {
+        background: #fff;
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 1px;
+        line-height: 1.2;
+        opacity: 0.05;
+      }
+      .nld-1bx {
+        max-width: 960px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .skm-9vz {
+        font-size: 1px;
+        color: #fff;
+      }
+      .skm-9vz p {
+        font-size: 1px;
+        color: #fff;
+        line-height: 1.2;
+      }
+      .skm-9vz a {
+        color: #fff;
+      }
+      .phw-4dj {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px 6px;
+      }
+      .phw-4dj button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1px;
+        cursor: pointer;
+        padding: 0;
+      }
+      .phw-4dj button:hover {
+        color: #ccc;
+      }
+      .fuc-6gy {
+        border: none;
+        border-top: 1px solid #111;
+      }
+      .obr-3qm {
+        font-size: 1px;
+        color: #fff;
+        line-height: 1.2;
+      }
+      .ztn-8pk {
+        font-size: 1px;
+        color: #fff;
+        text-align: center;
+      }
+
+      /* ── Modal ── */
+      .iwe-5ch {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 9000;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+      }
+      .iwe-5ch.vqr-5dx {
+        display: flex;
+      }
+      .mqf-2lr {
+        background: #ffffff;
+        color: var(--mq9-dk);
+        border: 1px solid var(--mq9-br);
+        border-radius: 14px;
+        max-width: 680px;
+        width: 100%;
+        max-height: 88vh;
+        overflow-y: auto;
+        padding: 32px 28px;
+      }
+      .mqf-2lr h2 {
+        font-size: 18px;
+        margin-bottom: 16px;
+        color: var(--mq9-hd);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .dkv-7ns {
+        background: none;
+        border: none;
+        color: var(--mq9-md);
+        font-size: 22px;
+        cursor: pointer;
+        line-height: 1;
+      }
+      .dkv-7ns:hover {
+        color: var(--mq9-dk);
+      }
+      .yjp-4tx h3 {
+        font-size: 15px;
+        margin: 18px 0 6px;
+        color: var(--mq9-dk);
+      }
+      .yjp-4tx p,
+      .yjp-4tx ul {
+        font-size: 13px;
+        color: var(--mq9-md);
+        line-height: 1.8;
+      }
+      .yjp-4tx ul {
+        padding-left: 18px;
+      }
+      .yjp-4tx li {
+        margin-bottom: 4px;
+      }
+
+      /* ── Helpers ── */
+      .bga-1rw {
+        display: none;
+      }
+      .xek-6mz {
+        background-color: #a70b0d;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.3rem;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="xek-6mz">
+      <div class="hcn-9qf">HEALTH</div>
+    </header>
+
+    <!-- Hero -->
+    <section class="tyb-4mx">
+      <vturb-smartplayer
+        id="vid-69eba3998151708c5bc6c3ac"
+        style="display: block; margin: 0 auto; width: 100%"
+      ></vturb-smartplayer>
+      <script type="text/javascript">
+        var s = document.createElement("script")
+        ;((s.src =
+          "https://scripts.converteai.net/44b62239-d730-47b6-ae87-62548241599d/players/69eba3998151708c5bc6c3ac/v4/player.js"),
+          (s.async = !0),
+          document.head.appendChild(s))
+      </script>
+    </section>
+
+    <!-- Bottles (hidden until pitch time) -->
+    <div class="bga-1rw rjz-8kn">
+      <section class="cwp-2sl" id="toper">
+        <h3>Enjoy <span>FREE SHIPPING</span><br />on 3 and 6-Bottle Orders!</h3>
+        <p>
+          *For long-term results, we strongly recommend the
+          <b>6 bottle option</b> -- our best value!
+        </p>
+      </section>
+      <article style="padding: 15px 10px 0 10px" id="bottles" class="aev-7fh">
+        <a
+          class="smartplayer-click-event"
+          href="https://trk.desmonte381.lat/click/3"
+        >
+          <img
+            id="b6"
+            src="https://imagedelivery.net/2IMuCyHeF2Yuho0z8fGm6g/af990301-a8aa-4207-8e8d-09bc125f3e00/public"
+            alt=""
+          />
+        </a>
+        <a
+          class="smartplayer-click-event"
+          href="https://trk.desmonte381.lat/click/2"
+        >
+          <img
+            src="https://imagedelivery.net/2IMuCyHeF2Yuho0z8fGm6g/87cb79b2-1b0e-4b68-e8ee-7c683b927f00/public"
+            alt=""
+          />
+        </a>
+        <a
+          class="smartplayer-click-event"
+          href="https://trk.desmonte381.lat/click/1"
+        >
+          <img
+            src="https://imagedelivery.net/2IMuCyHeF2Yuho0z8fGm6g/56aeefab-966b-4815-e158-8f576bf19600/public"
+            alt=""
+          />
+        </a>
+      </article>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gqo-5rt">
+      <div class="nld-1bx">
+        <div class="skm-9vz">
+          <p><strong style="color: #fff">Contact Information</strong></p>
+          <p>STB NVA RESTAURANTE E LANCHONETE LTDA</p>
+          <p>
+            AV PST MARTIN LUTHER KING JR, 126 – BL C 1 LOJ 118 – DEL CASTILHO –
+            RIO DE JANEIRO/RJ – 20765-959 – Brasil
+          </p>
+          <p>CNPJ: 56.344.424/0001-28</p>
+          <p>Name: Lucia de Souza Vogas</p>
+          <p>Phone: <a href="tel:+552138472156">(21) 3847-2156</a></p>
+          <p>
+            Email:
+            <a href="mailto:contato@stbnva.com.br">contato@stbnva.com.br</a>
+          </p>
+        </div>
+
+        <div class="phw-4dj">
+          <button onclick="openModal('privacy')">Privacy Policy</button>
+          <button onclick="openModal('terms')">Terms &amp; Conditions</button>
+          <button onclick="openModal('cookie')">Cookie Policy</button>
+          <button onclick="openModal('refund')">Refund Policy</button>
+        </div>
+
+        <hr class="fuc-6gy" />
+
+        <div class="obr-3qm">
+          This site is not a part of Google™ website or network of sites such as
+          Youtube™ or any company owned by Google™ or Youtube™. Additionally
+          this website is not endorsed by Google™ Youtube™ Inc. in any way.
+          Google™ is a trademark for all their respective companies. FDA
+          Compliance The information on this website has not been evaluated by
+          the Food &amp; Drug Administration or any other medical body. We do
+          not aim to diagnose, treat, cure or prevent any illness or disease.
+          Information is shared for educational purposes only. You should always
+          consult your doctor before acting on any content on this website,
+          especially if you are pregnant, nursing, taking medication or have a
+          medical condition. *Individual Results May Vary And Are Not
+          Guaranteed: Individual weight loss results, including amount and time,
+          will vary. Whether genetic or environmental, it should be noted that
+          food intake, rates of metabolism and levels of exercise and physical
+          exertion vary from person to person. This means weight loss results
+          will also vary from person to person. No individual result should be
+          seen as typical. Thank you and enjoy!. Some names and personal
+          identifying information on this site have been changed to protect the
+          privacy of individuals. No individual result should be seen as
+          typical. In compliance with 16 CFR Part 255 and Federal Trade
+          Commission Guidelines on the use of endorsements and testimonials in
+          the marketing and advertising of websites: The testimonials,
+          statements, and opinions presented on our website are only applicable
+          to the individuals depicted, and may not be representative of the
+          experience of others. The testimonials are voluntary provided and are
+          not paid, nor were they provided with free products, services, or any
+          benefits in exchange for said statements. The testimonials are not
+          indicative of future results or success of any other individuals. We
+          cannot and does not guarantee the medical outcome or the results of
+          individuals utilizing the services provided by us or the providers in
+          our network, or from any of the websites we link, or refer to. The
+          testimonials and endorsements found on the site for the benefit of the
+          site or individual services or procedures are, to the best of our
+          knowledge, the true statements and beliefs of the individuals
+          providing them. In short, surgery involves risk, results may vary, and
+          outcomes are not guaranteed.
+        </div>
+
+        <p class="ztn-8pk">
+          &copy; 2025 STB NVA RESTAURANTE E LANCHONETE LTDA. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="iwe-5ch" id="modal-privacy">
+      <div class="mqf-2lr">
+        <h2>
+          Privacy Policy
+          <button class="dkv-7ns" onclick="closeModal('privacy')">
+            &times;
+          </button>
+        </h2>
+        <div class="yjp-4tx">
+          <p><em>Last Updated: May 2025</em></p>
+          <h3>1. Information We Collect</h3>
+          <p>
+            STB NVA RESTAURANTE E LANCHONETE LTDA ("we", "our", or "us")
+            collects information you provide directly to us, including:
+          </p>
+          <ul>
+            <li>Name, email address, and contact information</li>
+            <li>Payment and billing information</li>
+            <li>Communications you send to us</li>
+            <li>Information about your use of our services</li>
+          </ul>
+          <h3>2. How We Use Your Information</h3>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li>Provide, maintain, and improve our services</li>
+            <li>Process transactions and send related information</li>
+            <li>Send promotional communications (with your consent)</li>
+            <li>Respond to your comments and questions</li>
+            <li>Protect against fraudulent or illegal activity</li>
+          </ul>
+          <h3>3. Information Sharing</h3>
+          <p>
+            We do not sell, trade, or rent your personal information to third
+            parties. We may share your information with:
+          </p>
+          <ul>
+            <li>Service providers who assist in our operations</li>
+            <li>Professional advisors (lawyers, accountants)</li>
+            <li>Law enforcement when required by law</li>
+          </ul>
+          <h3>4. Data Security</h3>
+          <p>
+            We implement appropriate security measures to protect your personal
+            information. However, no method of transmission over the Internet is
+            100% secure.
+          </p>
+          <h3>5. Your Rights</h3>
+          <p>
+            You have the right to access, correct, or delete your personal
+            information. Contact us at contato@stbnva.com.br to exercise these
+            rights.
+          </p>
+          <h3>6. Contact Us</h3>
+          <p>
+            STB NVA RESTAURANTE E LANCHONETE LTDA<br />AV PST MARTIN LUTHER KING
+            JR, 126 – BL C 1 LOJ 118 – DEL CASTILHO – RIO DE JANEIRO/RJ –
+            20765-959<br />CNPJ: 56.344.424/0001-28<br />Email:
+            contato@stbnva.com.br<br />Phone: (21) 3847-2156
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="iwe-5ch" id="modal-terms">
+      <div class="mqf-2lr">
+        <h2>
+          Terms &amp; Conditions
+          <button class="dkv-7ns" onclick="closeModal('terms')">&times;</button>
+        </h2>
+        <div class="yjp-4tx">
+          <p><em>Last Updated: May 2025</em></p>
+          <h3>1. Acceptance of Terms</h3>
+          <p>
+            By accessing and using the services provided by STB NVA RESTAURANTE
+            E LANCHONETE LTDA, you agree to be bound by these Terms &amp;
+            Conditions. If you do not agree, please do not use our services.
+          </p>
+          <h3>2. Description of Services</h3>
+          <p>
+            STB NVA RESTAURANTE E LANCHONETE LTDA provides digital training
+            programs and educational content designed for personal development.
+            Our services are delivered electronically and are for informational
+            purposes only.
+          </p>
+          <h3>3. User Responsibilities</h3>
+          <p>You agree to:</p>
+          <ul>
+            <li>Provide accurate and complete information</li>
+            <li>Maintain the confidentiality of your account</li>
+            <li>Use our services only for lawful purposes</li>
+            <li>Not share, distribute, or resell our content</li>
+          </ul>
+          <h3>4. Intellectual Property</h3>
+          <p>
+            All content, including text, graphics, videos, and software, is the
+            property of STB NVA RESTAURANTE E LANCHONETE LTDA and is protected
+            by copyright laws.
+          </p>
+          <h3>5. Disclaimer of Warranties</h3>
+          <p>
+            Our services are provided "as is" without warranties of any kind. We
+            do not guarantee specific results from using our programs.
+            Individual results may vary.
+          </p>
+          <h3>6. Limitation of Liability</h3>
+          <p>
+            STB NVA RESTAURANTE E LANCHONETE LTDA shall not be liable for any
+            indirect, incidental, special, or consequential damages arising from
+            your use of our services.
+          </p>
+          <h3>7. Governing Law</h3>
+          <p>
+            These Terms shall be governed by the laws of Brazil. Any disputes
+            shall be resolved in the appropriate courts.
+          </p>
+          <h3>8. Contact Information</h3>
+          <p>
+            For questions about these Terms, contact us at
+            contato@stbnva.com.br.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="iwe-5ch" id="modal-cookie">
+      <div class="mqf-2lr">
+        <h2>
+          Cookie Policy
+          <button class="dkv-7ns" onclick="closeModal('cookie')">
+            &times;
+          </button>
+        </h2>
+        <div class="yjp-4tx">
+          <p><em>Last Updated: May 2025</em></p>
+          <h3>1. What Are Cookies</h3>
+          <p>
+            Cookies are small text files stored on your device when you visit
+            our website. They help us provide a better user experience and
+            understand how our site is used.
+          </p>
+          <h3>2. Types of Cookies We Use</h3>
+          <ul>
+            <li>
+              <strong>Essential Cookies:</strong> Required for the website to
+              function properly.
+            </li>
+            <li>
+              <strong>Analytics Cookies:</strong> Help us understand how
+              visitors interact with our website.
+            </li>
+            <li>
+              <strong>Marketing Cookies:</strong> Used to track visitors across
+              websites for advertising purposes.
+            </li>
+            <li>
+              <strong>Preference Cookies:</strong> Remember your settings and
+              preferences.
+            </li>
+          </ul>
+          <h3>3. Third-Party Cookies</h3>
+          <p>
+            We may use third-party services that set cookies on our behalf,
+            including:
+          </p>
+          <ul>
+            <li>Google Analytics (traffic analysis)</li>
+            <li>Facebook Pixel (advertising)</li>
+            <li>Payment processors (transaction security)</li>
+          </ul>
+          <h3>4. Managing Cookies</h3>
+          <p>You can control cookies through your browser settings.</p>
+          <ul>
+            <li>Chrome: Settings → Privacy and Security → Cookies</li>
+            <li>Firefox: Options → Privacy &amp; Security → Cookies</li>
+            <li>Safari: Preferences → Privacy → Cookies</li>
+          </ul>
+          <h3>5. Contact Us</h3>
+          <p>
+            If you have questions about our use of cookies, contact us at
+            contato@stbnva.com.br.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="iwe-5ch" id="modal-refund">
+      <div class="mqf-2lr">
+        <h2>
+          Refund Policy
+          <button class="dkv-7ns" onclick="closeModal('refund')">
+            &times;
+          </button>
+        </h2>
+        <div class="yjp-4tx">
+          <p><em>Last Updated: May 2025</em></p>
+          <h3>1. Money-Back Guarantee</h3>
+          <p>
+            STB NVA RESTAURANTE E LANCHONETE LTDA offers a 60-day money-back
+            guarantee on all digital products. If you are not satisfied with
+            your purchase for any reason, you may request a full refund within
+            60 days of the original purchase date.
+          </p>
+          <h3>2. How to Request a Refund</h3>
+          <p>To request a refund, please:</p>
+          <ul>
+            <li>Email us at contato@stbnva.com.br with your order number</li>
+            <li>Include the email address used for the purchase</li>
+            <li>Briefly explain why you are requesting a refund</li>
+          </ul>
+          <h3>3. Refund Processing</h3>
+          <ul>
+            <li>
+              Refund requests are typically processed within 5–7 business days
+            </li>
+            <li>Refunds will be issued to the original payment method</li>
+            <li>
+              You will receive an email confirmation once the refund is
+              processed
+            </li>
+            <li>
+              It may take 5–10 additional days for the refund to appear on your
+              statement
+            </li>
+          </ul>
+          <h3>4. Conditions</h3>
+          <ul>
+            <li>Refunds are available only within 60 days of purchase</li>
+            <li>Each customer is eligible for one refund per product</li>
+            <li>Access to the program will be revoked upon refund approval</li>
+          </ul>
+          <h3>5. Contact Us</h3>
+          <p>
+            Email: contato@stbnva.com.br<br />Phone: (21) 3847-2156<br />STB NVA
+            RESTAURANTE E LANCHONETE LTDA<br />AV PST MARTIN LUTHER KING JR, 126
+            – BL C 1 LOJ 118 – DEL CASTILHO – RIO DE JANEIRO/RJ – 20765-959
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function openModal(id) {
+        document.getElementById("modal-" + id).classList.add("vqr-5dx")
+      }
+      function closeModal(id) {
+        document.getElementById("modal-" + id).classList.remove("vqr-5dx")
+      }
+      document.querySelectorAll(".iwe-5ch").forEach(function (el) {
+        el.addEventListener("click", function (e) {
+          if (e.target === el) el.classList.remove("vqr-5dx")
+        })
+      })
+
+      const tempoPitch = 3
+      const minutos = Math.floor(tempoPitch / 100)
+      const segundos = tempoPitch % 100
+      const tempoPitchSegundos = minutos * 60 + segundos
+      var delaySeconds = tempoPitchSegundos
+      var player = document.querySelector("vturb-smartplayer")
+      if (player) {
+        player.addEventListener("player:ready", function () {
+          player.displayHiddenElements(delaySeconds, [".bga-1rw"], {
+            persist: true,
+          })
+        })
+      }
+    </script>
+  </body>
+</html>
